@@ -9,7 +9,7 @@ async function handler(req) {
   const path = url.substring(url.indexOf('.dev') + 4);
   const method = req.method;
 
-  return await fetch(http://${IP}:${PORT}${path}, {
+  return await fetch(`http://${IP}:${PORT}${path}`, {
     method: req.method,
     body: method !== 'GET' && method !== 'HEAD' ? body : undefined,
     headers: new Headers(req.headers),
